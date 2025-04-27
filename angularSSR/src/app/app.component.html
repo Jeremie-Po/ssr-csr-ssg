@@ -1,14 +1,8 @@
 <h1 >Je suis une appli </h1>
 
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem blanditiis cupiditate dolor illo, ipsa ipsum minus officiis placeat possimus provident quae, quis repellat, sint velit vero voluptatem. Aliquam, placeat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum id iste maiores numquam perferendis quae rem temporibus vel veniam? Assumenda consequatur eos est in ipsum numquam omnis quo sapiente?</p>
-<img style="max-width: 100%;width: 100%; height: auto" ngSrc="/landscape_width1200.jpg" width="1200" height="799" priority/>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem blanditiis cupiditate dolor illo, ipsa ipsum minus officiis placeat possimus provident quae, quis repellat, sint velit vero voluptatem. Aliquam, placeat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum id iste maiores numquam perferendis quae rem temporibus vel veniam? Assumenda consequatur eos est in ipsum numquam omnis quo sapiente?</p>
+@defer(hydrate on idle){
+<app-a/>
 
-<!--autre facon de gerer les images :-->
-
-<div style="width:100%;height:400px;position: relative">
-  <img style="object-fit: cover" ngSrc="/landscape_width1200.jpg" fill/>
-
-</div>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem blanditiis cupiditate dolor illo, ipsa ipsum minus officiis placeat possimus provident quae, quis repellat, sint velit vero voluptatem. Aliquam, placeat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum id iste maiores numquam perferendis quae rem temporibus vel veniam? Assumenda consequatur eos est in ipsum numquam omnis quo sapiente?</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus autem blanditiis cupiditate dolor illo, ipsa ipsum minus officiis placeat possimus provident quae, quis repellat, sint velit vero voluptatem. Aliquam, placeat. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aliquam earum id iste maiores numquam perferendis quae rem temporibus vel veniam? Assumenda consequatur eos est in ipsum numquam omnis quo sapiente?</p>
+} @placeholder (){
+  <h1>loading...</h1>
+}
