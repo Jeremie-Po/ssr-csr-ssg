@@ -1,5 +1,5 @@
 import {Component, inject} from '@angular/core';
-import {Title} from '@angular/platform-browser';
+import {Meta, Title} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-b',
@@ -9,8 +9,13 @@ import {Title} from '@angular/platform-browser';
 })
 export class BComponent {
 title = inject(Title);
+meta=inject(Meta);
 
 constructor() {
   this.title.setTitle('je suis B');
+  this.meta.updateTag({
+    property:'og:title',
+    content:'Éditions Le Robert : la référence en langues pour définir, traduire, corriger et certifier - Dictionnaire Le Robert'
+  })
 }
 }

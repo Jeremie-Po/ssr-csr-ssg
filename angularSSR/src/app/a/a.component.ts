@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import {Component, inject} from '@angular/core';
+import {Meta} from '@angular/platform-browser';
 
 @Component({
   selector: 'app-a',
@@ -7,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrl: './a.component.css'
 })
 export class AComponent {
+  meta=inject(Meta);
 
+  constructor() {
+    this.meta.updateTag({
+      property:'og:title',
+      content:'PAGE A Éditions Le Robert : la référence en langues pour définir, traduire, corriger et certifier - Dictionnaire Le Robert'
+    })
+  }
 }
